@@ -1,56 +1,266 @@
-
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יניב שאמלי - עורך דין</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>יניב שאמלי - עורך דין | Yaniv Shamli - Attorney at Law</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0f2c;
+            color: #ffffff;
+            direction: rtl;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: #0a0f2c;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e2d50;
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4da6ff;
+        }
+
+        .hero {
+            height: 500px;
+            background: url('https://images.unsplash.com/photo-1555375771-220ec7a60b8a') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: rgba(10, 15, 44, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cccccc;
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #cccccc;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .specialty {
+            background-color: #1e2d50;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .specialty:hover {
+            transform: translateY(-10px);
+        }
+
+        .specialty h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 40px;
+            background-color: #4da6ff;
+            color: #ffffff;
+            padding: 15px 40px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #3b8ed6;
+        }
+
+        footer {
+            background-color: #081024;
+            color: #aaaaaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            border-top: 1px solid #1e2d50;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .specialties {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .specialty {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">YANIV SHAMLI</div>
-        <nav class="nav">
-            <a href="#home">ראשי</a>
-            <a href="#about">אודות</a>
-            <a href="#services">תחומי התמחות</a>
-            <a href="#contact">צור קשר</a>
-        </nav>
-    </header>
 
-    <section class="hero" id="home">
+<header>
+    <div class="logo">YANIV SHAMLI</div>
+    <nav>
+        <a href="#">ראשי</a>
+        <a href="#">אודות</a>
+        <a href="#">תחומי התמחות</a>
+        <a href="#">צור קשר</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
         <h1>יניב שאמלי</h1>
         <p>עורך דין | מקצועיות. מחויבות. תוצאות.</p>
-    </section>
+    </div>
+</section>
 
-    <section class="about" id="about">
-        <h2>אודות</h2>
-        <p>יניב שאמלי, עורך דין מנוסה עם ניסיון רב בייעוץ משפטי אסטרטגי ותביעות מסחריות.</p>
-    </section>
+<section class="section">
+    <h2>ברוכים הבאים</h2>
+    <p>
+        יניב שאמלי, עורך דין מנוסה ומקצועי, עם ניסיון עשיר בייעוץ משפטי אסטרטגי לחברות וגופים פרטיים וציבוריים.  
+        מומחה בתחום המשפט האזרחי-מסחרי, רגולציה של שוק ההון ותביעות ייצוגיות.  
+        בעל יכולות אנליטיות וחשיבה יצירתית, המאפשרות מתן פתרונות מותאמים ללקוחות תוך שמירה על יחס אישי ודיסקרטיות מלאה.
+    </p>
+</section>
 
-    <section class="services" id="services">
-        <h2>תחומי התמחות</h2>
-        <ul>
-            <li>חוזים</li>
-            <li>צוואות וירושות</li>
-            <li>מקרקעין</li>
-            <li>ייפוי כוח מתמשך</li>
-            <li>תביעות מסחריות</li>
-            <li>ייעוץ בתחום האזרחי-עסקי</li>
-        </ul>
-    </section>
+<section class="section">
+    <h2>תחומי התמחות</h2>
+    <div class="specialties">
+        <div class="specialty">
+            <h3>חוזים</h3>
+            <p>עריכת חוזים מורכבים וייעוץ משפטי בנושאים חוזיים ועסקיים.</p>
+        </div>
+        <div class="specialty">
+            <h3>צוואות וירושות</h3>
+            <p>ליווי משפטי אישי בנושאי ירושה, עריכת צוואות וטיפול בבתי המשפט לענייני משפחה.</p>
+        </div>
+        <div class="specialty">
+            <h3>מקרקעין</h3>
+            <p>ייצוג בעסקאות נדל"ן, תביעות פינוי וסילוק יד, ליווי רישום זכויות ומכרזים.</p>
+        </div>
+        <div class="specialty">
+            <h3>ייפוי כוח מתמשך</h3>
+            <p>עריכת ייפוי כוח מתמשך בליווי אישי ומקצועי, תוך שמירה על זכויותיך.</p>
+        </div>
+        <div class="specialty">
+            <h3>תביעות מסחריות</h3>
+            <p>ניהול תביעות מורכבות בתחום המסחרי, ייצוג בבתי משפט וליווי אסטרטגי.</p>
+        </div>
+        <div class="specialty">
+            <h3>ייעוץ אזרחי-עסקי</h3>
+            <p>ייעוץ משפטי שוטף לחברות ועסקים, תוך ראייה רחבה והתאמה לצורכי הלקוח.</p>
+        </div>
+    </div>
+</section>
 
-    <section class="contact" id="contact">
-        <h2>צור קשר</h2>
+<section class="section">
+    <h2>צור קשר</h2>
+    <p>
+        מוזמנים ליצור קשר לקביעת פגישה ולקבלת ייעוץ מקצועי.
+    </p>
+    <div class="contact-info">
         <p>טלפון: <a href="tel:0528971456">052-8971456</a></p>
         <p>מייל: <a href="mailto:Yanivshamli@gmail.com">Yanivshamli@gmail.com</a></p>
-        <a class="whatsapp" href="https://wa.me/972528971456" target="_blank">ייעוץ חינם בוואטסאפ</a>
-    </section>
+        <a href="https://wa.me/972528971456?text=שלום%20יניב,%20אני%20מעוניין%20לקבל%20ייעוץ%20משפטי%20חינם." target="_blank" class="contact-btn">ייעוץ חינם בוואטסאפ</a>
+    </div>
+</section>
 
-    <footer class="footer">
-        &copy; 2025 יניב שאמלי | כל הזכויות שמורות
-    </footer>
+<footer>
+    &copy; 2025 Yaniv Shamli | יניב שאמלי - כל הזכויות שמורות
+</footer>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
